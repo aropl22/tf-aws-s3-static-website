@@ -46,7 +46,7 @@ and then specify that file on the command line with -var-file
 
  Example (terraform.tfvars):
 
-'''terraform
+```terraform
 domain_name = "example.com" # configure existing_dns_zone = false if domain zone doesn't exist in Route53
-'''
+```
  
