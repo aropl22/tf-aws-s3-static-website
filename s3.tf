@@ -17,24 +17,6 @@ resource "aws_s3_bucket_policy" "allow_public_read" {
   depends_on = [aws_s3_bucket_public_access_block.s3-web] #need to disble public access before attempting to add the policy
 }
 
-
-/*
-Create policy
-
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::BUCKET_ARN/*"
-        }
-    ]
-}
-*/
-
 data "aws_iam_policy_document" "public_read" {
   statement {
     principals {
